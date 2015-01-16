@@ -11,7 +11,7 @@ var bio = {
     "github": "lindazhaoatt",
     "location": "Arlington Heights, Illois"
        },
-  "bioPic": "images/me.jpg",
+  "bioPic": "images/fry.jpg",
   "skills": ["awesomeness", "programming", "teaching", "JS"],
 
    displaybio:  function()
