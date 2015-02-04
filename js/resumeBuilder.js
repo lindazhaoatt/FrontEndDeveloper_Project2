@@ -14,7 +14,7 @@ var bio = {
   "bioPic": "images/fry.jpg",
   "skills": ["awesomeness", "programming", "teaching", "JS"],
 
-   displaybio:  function()
+   display:  function()
   {
 
     var formattedName=HTMLheaderName.replace('%data%', bio.name);
@@ -88,7 +88,7 @@ var work = {
     ]
  ,
  
-    displaywork:  function()
+    display:  function()
     {
 
      for (var i in work.jobs) {
@@ -116,7 +116,7 @@ var education = {
     "schools": [
        {
        	"name": "Tsinhua University",
-       	"city": "Beijing, China",
+       	"location": "Beijing, China",
        	"degree": "BS",
        	"majors": ["Engineering", "Environmental Science"],
        	"dates": 1983,
@@ -125,7 +125,7 @@ var education = {
 
       {
        	"name": "University of Cincinnati",
-       	"city": "Cincinnati, OH",
+       	"location": "Cincinnati, OH",
        	"degree": "Masters",
        	"majors": ["Engineering"],
        	"dates": 1992,
@@ -147,7 +147,7 @@ var education = {
     	}
       ],
 
-   displayeducation: function (){
+   display: function (){
 
     for (var i in education.schools) {
 
@@ -161,7 +161,7 @@ var education = {
       $(".education-entry:last").append(formattedSchoolTitle);
 
 
-      var formattedSchoolLocation=HTMLschoolLocation.replace("%data%", education.schools[i].city) ;
+      var formattedSchoolLocation=HTMLschoolLocation.replace("%data%", education.schools[i].location) ;
       $(".education-entry:last").append(formattedSchoolLocation);
 
       var formattedSschoolDates=HTMLschoolDates.replace("%data%", education.schools[i].dates) ;
@@ -237,7 +237,7 @@ var projects = {
 	}
 	],
 
-    displayprojects: function (){
+    display: function (){
 
       for (var i in projects.projects) {
 
@@ -282,7 +282,7 @@ var projects = {
 
  //map
  var map = {  
-  displaymap: function() {
+  display: function() {
     window.addEventListener('load', map.initialize);    
     $('#mapDiv').append(googleMap);
   } 
@@ -290,8 +290,8 @@ var projects = {
 
  //$("#mapDiv").append(googleMap);
 
- bio.displaybio();
- work.displaywork();
- projects.displayprojects();
- education.displayeducation();
- map.displaymap();
+ bio.display();
+ work.display();
+ projects.display();
+ education.display();
+ map.display();
